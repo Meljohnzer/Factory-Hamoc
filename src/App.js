@@ -3,8 +3,7 @@ import { useState } from 'react';
 import './App.css';
 
 
-
-
+//function component 
 const BackgroundColor = (props) =>{
     return  <div className='App-header' style={{backgroundColor:props.label,width:"100vw",display:props.display}}>
       <input onChange={props.onChange} placeholder={props.placeholder}/>
@@ -14,11 +13,12 @@ const BackgroundColor = (props) =>{
 
 
 
-
+//function that called the component
 const Factory = ({change,...props}) =>{
   return <BackgroundColor {...props} />
 }
 
+//main functions
 function App() {
 
   const [show,setShow ] = useState('')
